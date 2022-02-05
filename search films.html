@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search - Cinema@Home</title>
+	<link rel="stylesheet" href="styles/search.css">
+	<link rel = "icon" href =  "images/icon.gif" type = "image/x-icon"> 
+</head>
+<body id="budy">
+
+
+	<script>
+
+		function clean(x){
+				var y = "";
+				x = x.toLowerCase();
+				for(var i = 0; i < x.length; i++){
+					if(x[i] == ' ' || x[i] == '_')
+						continue;
+					y += x[i];
+				}
+				return y;
+		}
+
+		function is_prefix(x , y){
+			if(x.length > y.length)
+				return false;
+			for(var i = 0; i < x.length; i++){
+				if(x[i] != y[i])
+					return false;
+			}
+			return true;
+		}
+
+		function search(){
+			var urls = ["alex" , "badboys" , "bears" , "becky" , "blindspot" , "bloodshot" , "defending" , "doctor" , "inside" , "ironman3" , "island" , "sonic" , "stargirl" , "war" , "thecallofwild"];
+			var names = ["Alex" , "Bad Boys" , "Bears" , "Becky" , "Blind Spot" , "Bloodshot" , "Defending" , "Doctor" , "Inside" , "Iron Man 3" , "Island" , "Sonic" , "Star Girl" , "War" , "The Call Of Wild"];
+			var film_name = document.getElementById("in").value;
+			
+			film_name = clean(film_name);
+			var collected = "";
+
+			for(var i = 0; i < 15; i++){
+				if(is_prefix(film_name , urls[i])){
+					collected += '<div class="box"><img src = "images/films/' + urls[i] + '.jpg">';
+					collected += '<h2>' + names[i] + '</h2></div>';
+				}
+			}
+
+			document.getElementById('grid').innerHTML = collected;
+			
+		}
+
+		function ran(){
+			var urls = ["alex" , "badboys" , "bears" , "becky" , "blindspot" , "bloodshot" , "defending" , "doctor" , "inside" , "ironman3" , "island" , "sonic" , "stargirl" , "war" , "thecallofwild"];
+			var names = ["Alex" , "Bad Boys" , "Bears" , "Becky" , "Blind Spot" , "Bloodshot" , "Defending" , "Doctor" , "Insde" , "Iron Man 3" , "Island" , "Sonic" , "Star Girl" , "War" , "The Call Of Wild"];
+			var collected = "";
+			for(var i = 0; i < 15; i++){
+				if(Math.floor(Math.random() * 15) % 2 == 0){
+					collected += '<div class="box"><img src = "images/films/' + urls[i] + '.jpg">';
+					collected += '<h2>' + names[i] + '</h2></div>';
+				}
+			}
+			document.getElementById('grid').innerHTML = collected;
+		}
+		function mag(){
+			var x = Math.floor(Math.random() * 3) + 1;
+			document.body.style.backgroundImage = "url('images/b" + x + ".jpg')";
+		}
+	</script>
+
+	<div class="split left" style="opacity: 0.9;">
+   		 <img src="images/logo.png" style="margin-right: 10px; margin-left: 5px; margin-top: 10px;">
+		<ul id="leftList" style="margin-top: 100px" class="verdana">
+ 				<li><a class="leftList" href="home.html">Home</a></li>
+ 				<li><a href="membership.htm">Membership</a></li>
+ 				<li><a href="#home">Our Company</a></li>
+ 				<li><a href="#contact-us">Contact Us</a></li>
+ 				<li><a href="login.html">Login</a></li>
+ 		</ul>
+	</div>
+
+
+	<div class="split centered" id="ha" style="width: 75%; position: fixed;">
+			<div class="content" style="padding: 20px; margin: 5px; border-color: #FDD635; ">
+				<h2>What are you about to watch ?</h2>
+	      		<input type="text" oninput="search()" placeholder="Film Name" id="in">
+	 			<button onclick="ran()" style="background-color: red;">Random</button>
+	 			<button onclick="mag()" style="background-color: blue;">Magic</button>
+	       <br>
+	       <br>
+	       <div id="grid" class="hover"></div>
+    </div>
+</body>
+</html>

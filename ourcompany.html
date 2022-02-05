@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>our Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="styles/company.css">
+  
+  
+</head>
+<body>
+
+    <script>
+        var str=["#FFA300","red","Green","blue","pink"];
+        var f=0;
+       function convertcolor(x)
+       {   
+           if(x==5)f=0,x=0;
+            document.getElementById("company").style.backgroundColor= str[x];
+       }
+    </script>
+<div id="company">
+  <h1>Company</h1>
+  <p id="we">We specialize in our work</p>
+  <form id="ourform">
+    <div id="mydiv">
+      <input type="email" id="myinput" size="50"  placeholder="Email Address" required>
+        <button type="button" id="mybutton">Subscribe</button>
+    </div>
+  </form>
+</div>
+ <div id="container">
+    <h2>About Company Page</h2>
+    <h4>learn ..</h4>
+    <p>This is our company..</p>
+    <button  style="background-color: #FFA300;" onclick="convertcolor(++f)">Get in Touch</button>
+  </div>
+  
+  <div id="con" style="color: white;">
+    <h2>Our Values</h2>
+    <h4><strong>MISSION:</strong> Our mission is make you happy..</h4>
+    <p><strong>VISION:</strong> Our vision is the best..
+  </div>
+
+  <div id="icondiv1">
+      <h2 style="color: white; margin-left: 450px;" >SERVICES</h2>
+      <h3 style="color: white;margin-left: 450px">What we offer</h4>
+      <br>
+    <div>
+       <img src="images/cloud.png" style="margin-left: 190px;">
+       <p style="color: white;" id="cloud">We will be happy when you be happy</p>
+    </div>
+    <div id="be">
+    <img src="images/favourit.png" style="margin-left: 200px;" >
+    <p style="color: white;" id="love" >We love you</p>
+    </div>
+    <div id="ve">
+        <img src="images/attach.png" style="margin-left: 200px;">
+        <p style="color: white;" id="attachment" >we always at your service </p>
+    </div>
+   
+ </div>
+ <div>  
+  <div id="de">
+    <img src="images/computer.png" style="margin-left: 197px; margin-top: 20px;">
+    <p style="color: white; margin-left: 140px;" id="computer" > We do our best for you </p>
+  </div>
+  <div id="he">
+    <img src="images/traffic.png" style="margin-left: 200px; margin-top: 20px;">
+    <p style="color: white; margin-left: 150px;" id="traffic" > This is our work </p>
+  </div>
+  <div id="gr">
+     <img src="images/cloud.png" style="margin-left: 190px; margin-top: 20px;">  
+     <p style="color: white; margin-left: 150px; margin-top: 1px;" > We Hope The best </p>
+  </div>
+ </div>
+ 
+</body>
+</html>

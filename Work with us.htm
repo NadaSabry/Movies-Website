@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<style>
+body {background-color:lightgrey;}
+h1 {color:white;font-family:script;}
+ul {color:black;}
+li {disply:block;padding:12px;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: black;
+  padding: 70px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+</style>
+
+<title>Work with us</title>
+
+</head>
+<body>
+
+<header>
+<img src="images/logo.png" alt="Cinema@Home">
+  <h1 id="demo">Work With Us</h1>
+  <h3 style="font-size:25px">Play a little game and change the color of the sentence(Work with us).</h3>
+  <button type="button" onclick="document.getElementById('demo').style.color='orange'">Orange</button>
+  <button type="button" onclick="document.getElementById('demo').style.color='blue'">Blue</button>
+  <button type="button" onclick="document.getElementById('demo').style.color='lightgray'">Gray</button>
+  <button type="button" onclick="document.getElementById('demo').style.color='violet'">Violet</button>
+  <button type="button" onclick="document.getElementById('demo').style.color='tomato'">Red</button>
+</header>
+
+    <h1 style="background-color:orange;font-size:40px"> Our Nature :-</h1>
+	<ul style="background-color:orange;font-size:20px;">
+    	   	<li>We represent an amazing site to serve people who can't go to the cinema to watch the newest movies , So we decided to bring the cinema to theis homes instead , we call it Cinema@Home.</li>
+    		<li>We can offer you the ability to watch films,movies,cartoons,sries etc...</li>
+		<li>Also we need to recruit people to work with us like :
+			<ol>
+				<li>Graphic designer</li>
+				<li>Web developer</li>
+				<li>Animation expert</li>
+				<li>Sales</li>
+				<li>Moderator</li>
+				<li>Desicions making supporter</li>
+			</ol>
+		</li>		
+		<li>If you want to join our team and work with us send your CV to this address (CinemaatHome@gmail.com),then we will contact you.</li>
+  	</ul>
+<div id="test" style="text-align:center;">
+<h1 style="color:black">Just for fun ...</h1>
+<button onclick="document.getElementById('myImage').src='images/like.png'" style="font-size:25px">like our site</button>
+
+<img id="myImage" src="images/dislike.png" style="width:300px;">
+
+<button onclick="document.getElementById('myImage').src='images/dislike.png'" style="font-size:25px">Don't like our site</button>
+</div>
+
+
+<p style="text-align:center;font-size:30px">If you didn't like this game you can make it disappear if you <strong style="font-size:35px" onmouseover="style.color='red'" onmouseout="style.color='black'">click here</strong></p>
+
+
+</body>
+</html>

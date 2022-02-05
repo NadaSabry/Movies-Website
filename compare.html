@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Compare</title>
+   <link rel="stylesheet" href="styles/compare.css" type="text/css">
+   <link rel = "icon" href =  "images/icon.gif" type = "image/x-icon">
+    </head>
+    <body>
+ 			
+    		<script>
+    			var selected1 = -1;
+    			var selected2 = -1;
+    			function goo(x , y){
+    				var location = ["ironman3", "island", "inside" , "badboys" , "thecallofwild" , "sonic"];
+    				var names = ["Iron Man 3" , "Island" , "Inside" , "Bad Boys" , "The Call Of Wild" , "Sonic"];
+    				var disc = ["Steel Man Fight for Glory" , "A weird Island held by some Crimnals" , "inside and outside." , "Bad Boys from their name no one likes them because of their bad actions." , "we are calling wild nature"  , "Sonic the blue creature."];
+    				var type = ["Action" , "Horror" , "Strategy" , "Comedy" , "Tragedy" , "Cartoon"];
+    				var rates = [3 , 6 , 5 , 7 , 9 , 8];
+    				document.getElementById('FilmPic' + y).src = "images/films/" + location[x - 1] + ".jpg";
+    				document.getElementById('FilmName' + y).innerHTML = names[x - 1];
+    				document.getElementById('FilmTyp' + y).innerHTML = type[x - 1];
+    				document.getElementById('FilmDisc' + y).innerHTML = disc[x - 1];
+    				document.getElementById('FilmRat' + y).innerHTML = rates[x - 1];
+
+    				if (y == 1) {
+    					selected1 = x;
+    					document.getElementById(1).href = ("films/trail" + x + ".mp4");
+    				} else {
+    					selected2 = x;
+    					document.getElementById(2).href = ("films/trail" + x + ".mp4");
+    				}
+    			}
+    			function watch_now(y){
+    				var location = ["ironman3", "island", "inside" , "badboys" , "thecallofwild" , "sonic"];
+    				var names = ["Iron Man 3" , "Island" , "Inside" , "Bad Boys" , "The Call Of Wild" , "Sonic"];
+    				var disc = ["Steel Man Fight for Glory" , "A weird Island held by some Crimnals" , "inside and outside." , "Bad Boys from their name no one likes them because of their bad actions." , "we are calling wild nature"  , "Sonic the blue creature."];
+    				var rates = [3 , 6 , 5 , 7 , 9 , 8];
+    				var type = ["Action" , "Horror" , "Strategy" , "Comedy" , "Tragedy" , "Cartoon"];
+
+    				var x = -1;
+    				if(y == 1 && selected1 != -1){
+    					x = selected1;
+    				} else if(y == 2 && selected2 != -1){
+    					x = selected2;
+    				}
+
+    				if(x != -1){
+    					document.getElementById('filmORGname').innerHTML = names[x - 1];
+    					document.getElementById('filmORGtype').innerHTML = type[x - 1];
+    					document.getElementById('filmORGdisc').innerHTML = disc[x - 1];
+    					document.getElementById('filmORGrate').innerHTML = rates[x - 1];
+    					document.getElementById('filmORGsource').src = "films/trail" + x + ".mp4";
+    					document.getElementById("frame0").style.height = "0";
+    					document.getElementById("frame1").style.height = "auto";
+    					document.getElementById("frame1").style.opacity = "0.95";
+    				}
+    			}
+    			function removiii(){
+    				document.getElementById("frame0").style.height = "auto";
+    				document.getElementById("frame1").style.height = "0";
+    				document.getElementById("frame1").style.opacity = "0";
+    				document.getElementById('filmORGname').innerHTML = "";
+					document.getElementById('filmORGtype').innerHTML = "";
+					document.getElementById('filmORGdisc').innerHTML = "";
+					document.getElementById('filmORGrate').innerHTML = "";
+					document.getElementById('filmORGsource').src = "";
+    			}
+    		</script>
+
+
+        	<div class="split left">
+   		    	<img src="images/logo.png" style="margin-right: 10px; margin-left: 5px;">
+		  		<ul id="leftList" style="margin-top: 100px" class="verdana">
+ 					<li><a class="leftList" href="home.html">Home</a></li>
+ 					<li><a href="membership.htm">Membership</a></li>
+ 					<li><a href="#home">Our Company</a></li>
+ 					<li><a href="#contact-us">Contact Us</a></li>
+ 					<li><a href="login.html" style="background-color: red;">Log out</a></li>
+ 				</ul>
+			</div>
+
+    		<div class="split centered" style="">
+		        <div class="comp" id="frame0">
+		            <div class="box1">
+		                <center>
+		                	<h1 style="color: white;" id="FilmName1">Name</h1>
+		                	<img id="FilmPic1" src="images/gold.jpg" style="border:6px double  darkorange; 
+		                    width:262.5px; height:390px;">
+		                </center>
+		                 <div style="height:275px" >
+		                    <p>
+		                    	<span>Type: </span> 
+		                    	<span style="color : white;" id="FilmTyp1"></span>
+		                    </p>
+		                    <p> <span>Rate : </span>
+		                    	<span id="FilmRat1" style="color: white;"></span> 
+		                    	<i class="fas fa-star" style="font-size:25px; color:yellow; margin-left:0px;"></i>
+		                    </p>
+		                    <p>
+		                    	<span>Description : </span>
+		                    	<span style="color : white;" id="FilmDisc1"></span>
+		                    </p>
+		                 </div>
+		                 <center>
+		                	 <button class="inCompareButton" onclick="watch_now(1)"><i class="fas fa-tv"></i> Watch Now</button>
+		               		 <a id="1" download>
+		                 		<button class="inCompareButton" ><i class="fas fa-download" onclick="download_film(1)"></i> Download</button>
+		                	 </a>
+		                </center>
+		                <div class="down" style="width: 95%;">
+		                    <ul>
+		                        <li><img src="images/films/ironman3.jpg" onclick="goo(1 , 1)"></li>
+		                        <li><img src="images/films/island.jpg" onclick="goo(2 , 1)"></li>
+		                        <li><img src="images/films/inside.jpg" onclick="goo(3 , 1)"></li>
+		                        <li><img src="images/films/badboys.jpg" onclick="goo(4 , 1)"></li>
+		                        <li><img src="images/films/thecallofwild.jpg" onclick="goo(5 , 1)"></li>
+		                        <li><img src="images/films/sonic.jpg" onclick="goo(6 , 1)"></li>
+		                    </ul>
+		                </div>
+		            </div>
+		             <div class="box2">
+		                 <center>
+		                 	<h1 style="color: white;" id="FilmName2">Name</h1>
+		                 	<img id="FilmPic2" src="images/gold.jpg" style="border:6px double  darkorange; 
+		                    width:262.5px; height:390px;">
+		                </center>
+		                 <div style="height:275px" >
+		                    <p>
+		                    	<span>Type: </span> 
+		                    	<span style="color : white;" id="FilmTyp2"></span>
+		                    </p>
+		                    <p> <span>Rate : </span>
+		                    	<span id="FilmRat2" style="color: white;"></span> 
+		                    	<i class="fas fa-star" style="font-size:25px; color:yellow; margin-left:0px;"></i>
+		                    </p>
+		                    <p>
+		                    	<span>Description : </span>
+		                    	<span style="color : white;" id="FilmDisc2"></span>
+		                    </p>
+		                 </div>
+		                 <center>
+		                 <button class="inCompareButton" onclick="watch_now(2)"><i class="fas fa-tv"></i> Watch Now</button>
+		                 <a id="2" href="" download>
+		                 	<button class="inCompareButton" ><i class="fas fa-download" onclick="download_film(2)"></i> Download
+		                 	</button>
+		                 </a>
+		                </center>
+			                <div class="down" style="width: 95%;">
+			                    <ul>
+			                        <li><img src="images/films/ironman3.jpg" onclick="goo(1 , 2)"></li>
+		                        <li><img src="images/films/island.jpg" onclick="goo(2 , 2)"></li>
+		                        <li><img src="images/films/inside.jpg" onclick="goo(3 , 2)"></li>
+		                        <li><img src="images/films/badboys.jpg" onclick="goo(4 , 2)"></li>
+		                        <li><img src="images/films/thecallofwild.jpg" onclick="goo(5 , 2)"></li>
+		                        <li><img src="images/films/sonic.jpg" onclick="goo(6 , 2)"></li>
+			                    </ul>
+			                </div>
+		            	</center>
+		            	</div>
+		        	</div>
+
+
+		        	<div class="box3" id="frame1" style="background-color: black; opacity: 0;">
+
+    						<button onclick="removiii()" style="float: right; margin-right: 20px; width: 50px; height: 50px; margin-top: 20px; color: darkorange; background-color: black;">x</button>
+		        			<center>
+		        				<h1 style="color: white; width: 50%;" id="filmORGname">Film Name</h1>
+		        				<video width="75%" height="auto" id="filmORGsource" controls>
+		        					<source type="video/mp4">
+								</video>
+						</center>
+						<p>
+	                    	<span>Type: </span> 
+	                    	<span style="color : white;" id="filmORGtype"></span>
+	                    </p>
+	                    <p> <span>Rate : </span>
+	                    	<span id="filmORGrate" style="color: white;"></span> 
+	                    	<i class="fas fa-star" style="font-size:25px; color:yellow; margin-left:0px;"></i>
+	                    </p>
+	                    <p>
+	                    	<span>Description : </span>
+	                    	<span style="color : white;" id="filmORGdisc"></span>
+			            </p>
+		        	</div>
+
+    		</div>
+    </body>
+
+</html>

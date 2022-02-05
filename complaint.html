@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>complaints</title>
+   <link  rel="stylesheet" href="styles/complaint.css">
+</head>
+<body >
+    <script>
+      function co()
+      {
+            document.getElementById("fs-frm").innerHTML ="<span> Thank you ..... we will try to fix your problem</span>";
+      }
+    </script>
+    <form id="fs-frm" name="complaint-form" accept-charset="utf-8"  >
+        <fieldset id="fs-frm-inputs">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+          <label for="email-address" style="font-size: large;">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@gmail.com" required="">
+          <label for="telephone" style="font-size: large;">Telephone Number (Optional)</label>
+          <input type="telephone" name="telephone" id="telephone" placeholder="(555) 555-5555">
+          <label for="complaint" style="font-size: large;">Complaint</label>
+          <textarea rows="6" name="complaint" id="complaint" placeholder="please tell us about your complaints " required=""></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
+        </fieldset>
+        <input type="submit" value="File Complaint" onclick="co()">
+      </form>
+      
+
+
+
+</body>
+
+</html>

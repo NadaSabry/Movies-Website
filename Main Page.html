@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <link rel = "icon" href =  "images/icon.gif" type = "image/x-icon">
+    <link rel="stylesheet" href="styles/Main%20Page%20Style.css" type="text/css">
+    
+<body>
+    <!-- java  !-->
+   
+    <script>
+        function call(x)
+        {
+			var n = document.getElementById("name"),
+				type = document.getElementById("newp"),
+				rate = document.getElementById("rat");
+			
+            switch(x)
+            {
+				case 1:
+				   n.innerHTML="Iron Man (<span>2017</span>)";
+				   type.innerHTML="Action";
+				   rate.innerHTML="7.9";
+				break;
+            
+				case 2:
+                   n.innerHTML="Island (<span>2016</span>)";
+                   type.innerHTML="Horror";
+				   rate.innerHTML="6.8";
+				break;
+				
+				case 3:
+				   n.innerHTML="Inside (<span>2018</span>)";
+                   type.innerHTML="Romantic";
+			       rate.innerHTML="4.7";
+				break;
+         
+				case 4:
+				    n.innerHTML="Bad boys (<span>2019</span>)";
+                    type.innerHTML="Action";
+				    rate.innerHTML="6.7";
+				break;
+          
+				case 5:
+				   n.innerHTML="The Call Of Wild (<span>2015</span>)";
+				   type.innerHTML="Action";
+				   rate.innerHTML="6.8";
+				break;
+					
+				case 6:
+					n.innerHTML="Sonic (<span>2019</span>)";
+					type.innerHTML="Action";
+					rate.innerHTML="6.6";
+				break;
+			}
+			document.getElementById("startvideo").src="films/trail" + x + ".mp4";
+		}
+        
+    </script>
+    
+	<!-- right side !-->
+      
+ <div>
+     <div class="d_right">
+            <div class="main" >
+                <p><span>Language : </span>English</p>
+                <p><span>Country : </span>USA</p>
+                <p><span>Genre : </span><span id="newp">Action</span></p>
+                <p><span>Rate : </span><span id="rat">5.3</span> <img src="images/star.png" style="width:23px; height:23px; color:yellow; margin-left:2px;"></p>
+                <center><h1 id="name">Bad boys (<span>2019</span>) </h1></center>
+                <center ><video id="startvideo" src="films/trail1.mp4" type="video/mp4" controls="controls" width="320" height="176"></video></center>
+                
+                <div class="down">
+                    <ul>
+                        <li><img src="images/films/ironman3.jpg" onclick="call(1)"  ></li>
+                        <li><img src="images/films/island.jpg" onclick="call(2)" ></li>
+                        <li><img src="images/films/inside.jpg" onclick="call(3)"></li>
+                        <li><img src="images/films/badboys.jpg"onclick="call(4)"></li>
+                        <li><img src="images/films/thecallofwild.jpg"onclick="call(5)"></li>
+                        <li><img src="images/films/sonic.jpg"onclick="call(6)"></li>
+                    </ul>
+                </div>
+                
+         </div>
+            </div>
+    
+<!-- left side !--> 
+	 
+<div class="list"> 
+        <div class="split left">
+   		 <img src="images/logo.png" style="margin-top: 23px; margin-left: 2px;width:270px;;">
+		  <ul id="leftList" style="margin-top: 100px" class="verdana">
+ 				<li><a class="leftList" href="homepage.html">Home</a></li>
+ 				<li><a href="membership.htm">Membership</a></li>
+ 				<li><a href="ourcompany.html">Our Company</a></li>
+ 				<li><a href="contact us.html">Contact Us</a></li>
+ 				<li><a href="Main%20Page.html">Main Page</a></li>
+ 				<li><a href="funpage.html">Fun Page</a></li> 
+ 				<li><a href="compare.html">Compare</a></li> 
+ 				<li><a href="search%20films.html">search films</a></li> 
+ 				<li><a href="Work with us.html">Work With Us</a></li> 
+ 				<li><a href="complaint.html">Complaints</a></li> 
+			    <li><a href="Register.html">Register</a></li> 
+			    <li id="log"><a href="login.html">Login</a></li>
+			    
+ 		</ul>
+	</div>
+        </div>
+	</div>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+Background Color Code
+#100E17
+
+Yellow Color Code
+#FFA300
+
+Grey Color Code
+#4F4F4F
+
+Black Color Code
+#000000
+
+Yellow Shadow With Grey Code
+#724700
+
+Grey Shadow Code
+#333437
+
+List Color
+#333333
+
+
+
+In you CSS file
+
+body{
+	background-color: #100E17;
+}
+
+#leftList{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color: #333333;
+}
+li {
+  float: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  text-decoration: none;
+  font-size: 25px;
+  background-color: #FFA300;
+  font-family:Verdana, Geneva, sans-serif;
+}
+
+li a:hover {
+  background-color: #100E17;
+  font-family: Verdana, Geneva, sans-serif;
+}
+h1{
+	font-family: Verdana, Geneva, sans-serif;
+	letter-spacing: 6px;
+	word-spacing: 0px;
+	color: #FFA300;
+	font-weight: 700;
+	text-decoration: none solid rgb(68, 68, 68);
+	text-transform: none;
+}
+h2{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 22px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: #FFFFFF;
+	text-align: top;
+}
+
+p{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 16px;
+	letter-spacing: 3.2px;
+	word-spacing: 0.8px;
+	color: #FFFFFF;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+
+.split {
+  height: 100%;
+  width: auto%;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+  background-color: #333333;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+.centered {
+  position: none;
+  left: 28%;
+  text-align: left;
+}
+
+#rightP{
+	float: right;
+}
+
+.row {
+  float: left;
+  width: auto%;
+  padding: 5px;
+}
+
+
